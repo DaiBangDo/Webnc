@@ -53,6 +53,71 @@
                                     </li>
                                     <li>
                                         <div class="cart-item">
+                                            <div class="image"><img src="~/Content/images/products/thum/products-01.png" alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Size: <span class="light-red">One size</span><br>Quantity: <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">$30.00</p>
+                                                <a href="#" class="remove"><img src="~/Content/images/remove.png" alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-item">
+                                            <div class="image"><img src="~/Content/images/products/thum/products-01.png" alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Size: <span class="light-red">One size</span><br>Quantity: <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">$30.00</p>
+                                                <a href="#" class="remove"><img src="~/Content/images/remove.png" alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-item">
+                                            <div class="image"><img src="~/Content/images/products/thum/products-01.png" alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Size: <span class="light-red">One size</span><br>Quantity: <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">$30.00</p>
+                                                <a href="#" class="remove"><img src="~/Content/images/remove.png" alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-item">
+                                            <div class="image"><img src="~/Content/images/products/thum/products-01.png" alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Size: <span class="light-red">One size</span><br>Quantity: <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">$30.00</p>
+                                                <a href="#" class="remove"><img src="~/Content/images/remove.png" alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-item">
+                                            <div class="image"><img src="~/Content/images/products/thum/products-01.png" alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Size: <span class="light-red">One size</span><br>Quantity: <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">$30.00</p>
+                                                <a href="#" class="remove"><img src="~/Content/images/remove.png" alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-item">
                                             <div class="image"><img src="~/Content/images/products/thum/products-02.png" alt=""></div>
                                             <div class="item-description">
                                                 <p class="name">Lincoln chair</p>
@@ -174,14 +239,14 @@
                             @for (var i = 0; i < 8; i++)
                             {
                                 {
-                                    var item = Model.ElementAt(2);
+                                    var item = Model.ElementAt(0);
                                     <div class="col-md-3 col-sm-6">
                                         <div class="products">
-                                            <div class="offer">- %20</div>
+                                            <div class="offer">-20%</div>
                                             <div class="thumbnail"><a href="details.html"><img src="~/img/@item.Anh" alt="Product Name"></a></div>
                                             <div class="productname">@Html.DisplayFor(modelItem => item.TenSP)</div>
                                             <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
-                                            <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ hàng</button><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                                            <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ</button><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
                                         </div>
                                     </div>
                                 }
@@ -200,10 +265,10 @@
                             @for (var i = 0; i < 8; i++)
                             {
                                 {
-                                    var item = Model.ElementAt(2);
+                                    var item = Model.ElementAt(0);
                                     <div class="col-md-3 col-sm-6">
                                         <div class="products">
-                                            <div class="offer">- %20</div>
+                                            <div class="offer">-20%</div>
                                             <div class="thumbnail"><a href="details.html"><img src="~/img/@item.Anh" alt="Product Name"></a></div>
                                             <div class="productname">@Html.DisplayFor(modelItem => item.TenSP)</div>
                                             <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
