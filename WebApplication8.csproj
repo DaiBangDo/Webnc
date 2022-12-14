@@ -194,7 +194,11 @@
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\blacklogo.jpg" />
     <Content Include="Content\images\black_transparent50.png" />
+    <Content Include="Content\images\calvin_klein.png" />
     <Content Include="Content\images\carticon.png" />
+    <Content Include="Content\images\chanel.jpg" />
+    <Content Include="Content\images\chanel.png" />
+    <Content Include="Content\images\Dior.png" />
     <Content Include="Content\images\down-arow-2.png" />
     <Content Include="Content\images\down-arow.png" />
     <Content Include="Content\images\envato.png" />
@@ -205,10 +209,12 @@
     <Content Include="Content\images\goods_66_448429.jpg" />
     <Content Include="Content\images\gplus.png" />
     <Content Include="Content\images\grid-icon.png" />
+    <Content Include="Content\images\gucci_logo.png" />
     <Content Include="Content\images\in.png" />
     <Content Include="Content\images\list-icon.png" />
     <Content Include="Content\images\loginbg.png" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\LVlogo.png" />
     <Content Include="Content\images\message.png" />
     <Content Include="Content\images\more-icon.png" />
     <Content Include="Content\images\mylogo-modified.png" />
@@ -257,6 +263,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Layout\details.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
