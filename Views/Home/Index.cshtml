@@ -7,16 +7,14 @@
         <div class="container" style="width:80%">
             <div class="row">
                 <div class="col-md-2 col-sm-2" style="height:100px;">
-                    <div class="logo"style="padding:5px"><a href="@Url.Action("Index", "Home", null)"><img style="height:90px" src="~/Content/images/mylogo-modified.png" alt="FlatShop"></a></div>
+                    <div class="logo" style="padding:5px"><a href="@Url.Action("Index", "Home", null)"><img style="height:90px" src="~/Content/images/mylogo-modified.png" alt="FlatShop"></a></div>
                 </div>
                 <div class="col-md-10 col-sm-10" style="height:100px; padding:0;">
                     <div class="header_top" style="align-items:center;display:flex;height:100%;padding:0;justify-content:space-between">
                         <ul class="nav navbar-nav">
-                            <li><a href="productgird.html">Thời trang nam</a></li>
-                            <li><a href="productlitst.html">Thời trang nữ</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phụ kiện</a>
-                            </li>
+                            <li><a href="~/ProductsOfCategory/Index/1">Thời trang nam</a></li>
+                            <li><a href="~/ProductsOfCategory/Index/2">Thời trang nữ</a></li>
+                            <li><a href="~/ProductsOfCategory/Index/3">Phụ kiện</a></li>
                             <li>
                                 <a href="productgird.html">
                                     Tin tức
@@ -39,9 +37,9 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="hom-slider"style="height:750px">
+    <div class="hom-slider" style="height:750px">
         <div class="container">
-            <div id="sequence"style="margin:0">
+            <div id="sequence" style="margin:0">
                 <ul class="sequence-canvas">
                     <li class="animate-in" style="height:595px">
                         <div class="flat-caption caption1 formLeft delay300 text-center" style="margin-top: 100px; margin-left: -100px;"><span class="suphead">Luxury </span></div>
@@ -50,26 +48,26 @@
                         </div>
                         <div class="flat-caption caption3 formLeft delay500 text-center">
                         </div>
-                        @{ 
+                        @{
                             var item1 = Model.ElementAt(0);
                         }
-                        <div class="flat-image formBottom delay200" data-duration="5" data-bottom="true"><img src="~/Content/images/@item1.Anh" alt=""style="object-fit:contain;height:595px"></div>
+                        <div class="flat-image formBottom delay200" data-duration="5" data-bottom="true"><img src="~/Content/images/@item1.Anh" alt="" style="object-fit:contain;height:595px"></div>
                     </li>
                     <li style="height:595px">
-                        <div class="flat-caption caption2 formLeft delay400"style="margin-top:100px;">
+                        <div class="flat-caption caption2 formLeft delay400" style="margin-top:100px;">
                             <h1>Collection For Winter</h1>
                         </div>
                         <div class="flat-caption caption3 formLeft delay500">
                         </div>
-                        <div class="flat-image formBottom delay200" data-bottom="true" style="height:595px"><img src="~/Content/images/@Model.ElementAt(1).Anh" alt=""style="object-fit:contain;height:595px"></div>
+                        <div class="flat-image formBottom delay200" data-bottom="true" style="height:595px"><img src="~/Content/images/@Model.ElementAt(1).Anh" alt="" style="object-fit:contain;height:595px"></div>
                     </li>
                     <li style="height:595px">
-                        <div class="flat-caption caption2 formLeft delay400 text-center"style="margin-top: 100px; margin-left: -100px;">
+                        <div class="flat-caption caption2 formLeft delay400 text-center" style="margin-top: 100px; margin-left: -100px;">
                             <h1>New Fashion of 2022</h1>
                         </div>
                         <div class="flat-caption caption3 formLeft delay500 text-center">
                         </div>
-                        <div class="flat-image formBottom delay200" data-bottom="true" style="height:595px"><img src="~/Content/images/@Model.ElementAt(2).Anh" alt=""style="object-fit:contain;height:595px"></div>
+                        <div class="flat-image formBottom delay200" data-bottom="true" style="height:595px"><img src="~/Content/images/@Model.ElementAt(2).Anh" alt="" style="object-fit:contain;height:595px"></div>
                     </li>
                 </ul>
             </div>
@@ -99,20 +97,18 @@
                 <ul id="hot">
                     <li>
                         <div class="row">
-                            @for (var i = 0; i < 8; i++)
+                            @foreach (var item in Model)
                             {
-                                {
-                                    var item = Model.ElementAt(0);
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="products">
-                                            <div class="offer">-20%</div>
-                                            <div class="thumbnail"style="margin-top:0"><a href="details.html"><img src="~/Content/images/@item.Anh" alt="Product Name"></a></div>
-                                            <div class="productname"style="margin-top:40px">@Html.DisplayFor(modelItem => item.TenSP)</div>
-                                            <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
-                                            <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ</button></div>
-                                        </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="products">
+                                        <div class="offer">-20%</div>
+                                        <div class="thumbnail" style="margin-top:0"><a href="~/ProductDetails/Index/@item.MaSP"><img src="~/Content/images/@item.Anh" alt="Product Name"></a></div>
+                                        <div class="productname" style="margin-top:40px">@Html.DisplayFor(modelItem => item.TenSP)</div>
+                                        <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
+                                        <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ</button></div>
                                     </div>
-                                }
+                                </div>
+
                             }
                         </div>
                     </li>
@@ -125,20 +121,18 @@
                 <ul id="featured">
                     <li>
                         <div class="row">
-                            @for (var i = 0; i < 8; i++)
+                            @foreach (var item in Model)
                             {
-                                {
-                                    var item = Model.ElementAt(0);
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="products">
-                                            <div class="offer">-20%</div>
-                                            <div class="thumbnail"style="margin-top:0"><a href="details.html"><img src="~/Content/images/@item.Anh" alt="Product Name"></a></div>
-                                            <div class="productname" style="margin-top:40px">@item.TenSP</div>
-                                            <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
-                                            <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ</button></div>
-                                        </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="products">
+                                        <div class="offer">-20%</div>
+                                        <div class="thumbnail" style="margin-top:0"><a href="~/ProductDetails/Index/@item.MaSP"><img src="~/Produc" alt="Product Name"></a></div>
+                                        <div class="productname" style="margin-top:40px">@item.TenSP</div>
+                                        <h4 class="price">@Html.DisplayFor(modelItem => item.GiaBan)</h4>
+                                        <div class="button_group"><button class="button add-cart" type="button">Thêm vào giỏ</button></div>
                                     </div>
-                                }
+                                </div>
+
                             }
                         </div>
                     </li>
@@ -188,7 +182,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="footer-logo"style="padding-top:30px;"><img style="height:90px" src="~/Content/images/mylogo-modified.png" alt=""></div>
+                        <div class="footer-logo" style="padding-top:30px;"><img style="height:90px" src="~/Content/images/mylogo-modified.png" alt=""></div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <h4 class="title">Thông tin <strong>Liên hệ</strong></h4>

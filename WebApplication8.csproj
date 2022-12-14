@@ -134,10 +134,21 @@
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungsController.cs" />
+    <Compile Include="Controllers\ProductDetailsController.cs" />
+    <Compile Include="Controllers\ProductsOfCategoryController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212131013481_InitialCreate.cs" />
+    <Compile Include="Migrations\202212131013481_InitialCreate.designer.cs">
+      <DependentUpon>202212131013481_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212141823201_AddProductDetails.cs" />
+    <Compile Include="Migrations\202212141823201_AddProductDetails.designer.cs">
+      <DependentUpon>202212141823201_AddProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DanhMuc.cs" />
     <Compile Include="Models\DonHang.cs" />
     <Compile Include="Models\HoaDon.cs" />
@@ -173,6 +184,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\activeden.png" />
     <Content Include="Content\images\address.png" />
+    <Content Include="Content\images\airtag.jpg" />
     <Content Include="Content\images\ao3lo.jpg" />
     <Content Include="Content\images\arow_left.png" />
     <Content Include="Content\images\arow_right.png" />
@@ -190,6 +202,7 @@
     <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\fbicon.png" />
     <Content Include="Content\images\fblike.png" />
+    <Content Include="Content\images\goods_66_448429.jpg" />
     <Content Include="Content\images\gplus.png" />
     <Content Include="Content\images\grid-icon.png" />
     <Content Include="Content\images\in.png" />
@@ -309,6 +322,8 @@
     <Content Include="Views\SanPhams\Details.cshtml" />
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
+    <Content Include="Views\ProductDetails\Index.cshtml" />
+    <Content Include="Views\ProductsOfCategory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +340,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202212131013481_InitialCreate.resx">
+      <DependentUpon>202212131013481_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212141823201_AddProductDetails.resx">
+      <DependentUpon>202212141823201_AddProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
