@@ -198,6 +198,7 @@
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\message.png" />
     <Content Include="Content\images\more-icon.png" />
+    <Content Include="Content\images\mylogo-modified.png" />
     <Content Include="Content\images\ny.jpg" />
     <Content Include="Content\images\phone.png" />
     <Content Include="Content\images\photodune.png" />
